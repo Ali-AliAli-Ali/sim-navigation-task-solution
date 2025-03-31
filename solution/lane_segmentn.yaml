@@ -1,0 +1,11 @@
+path: C:/Users/e.vladimirova/Desktop/geobot_projects/sim_navigation_competition/lane_segmentn_dataset
+train: images/train
+val: images/val
+
+nc: 5
+names: 
+  0: background
+  1: obstacle
+  2: lane
+  3: bridge
+  4: finish
