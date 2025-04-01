@@ -4,23 +4,9 @@ import numpy as np
 from ultralytics import YOLO
 
 global_part_path = os.path.dirname(os.path.abspath(__file__))
-yolo_best_path = f"{global_part_path}/../runs/segment/yolov8_simnav6/weights/best.pt"
+yolo_best_path = f"{global_part_path}/../runs/segment/yolov8_simnav/weights/best.pt"
 
 model = YOLO(yolo_best_path) 
-
-# train_metrics = model.train(
-#     data='lane_segmentn.yaml',  
-#     epochs=100,                  
-#     imgsz=640,                 
-#     batch=16,                  
-#     name='yolov8_simnav',
-#     device='cpu'
-# )
-
-# metrics = model.val()
-
-
-### FOR TESTS ###
 
 # semantic segmentation of frame
 

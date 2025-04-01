@@ -1,3 +1,4 @@
+import os
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -55,7 +56,9 @@ def check_mask(mask_num):
 #     )
 
 
-dataset_path = "C:/Users/e.vladimirova/Desktop/geobot_projects/sim_navigation_competition/lane_segmentn_dataset/"
+solution_path = os.path.dirname(os.path.abspath(__file__))
+dataset_path = f"{solution_path}/../../lane_segmentn_dataset/"
+n_classes = 5
 
 for i in range(1, 17):
     mask = cv2.imread(f'masks/train/{i}.png')
@@ -73,10 +76,10 @@ for i in range(17, 24):
 print("Converting train to YOLO format...")
 convert_segment_masks_to_yolo_seg(f"{dataset_path}bin_masks/train",
                                   f"{dataset_path}labels/train", 
-                                  5)
+                                  n_classes)
 print("Converting train to YOLO format done!")
 print("Converting val to YOLO format...")
 convert_segment_masks_to_yolo_seg(f"{dataset_path}bin_masks/val",
                                   f"{dataset_path}labels/val", 
-                                  5)
+                                  n_classes)
 print("Converting val to YOLO format done!")

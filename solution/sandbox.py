@@ -25,7 +25,7 @@ speed_queue = queue.Queue()
 
 
 def camera_stream_segment(camera: Camera):
-    yolo_best_path = f"{global_part_path}/../runs/segment/yolov8_simnav6/weights/best.pt"
+    yolo_best_path = f"{global_part_path}/../runs/segment/yolov8_simnav/weights/best.pt"
     model = YOLO(yolo_best_path) 
 
     while True:
