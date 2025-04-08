@@ -1,4 +1,4 @@
-path: C:/Users/Элина/Desktop/Geoscan/sim-navigation/lane_segmentn_dataset
+path: C:/Users/Элина/Desktop/Geoscan/sim-navigation/sim-navigation-task-solution/lane_segmentn_dataset
 train: images/train
 val: images/val
 
